@@ -1,0 +1,21 @@
+{
+  "name": "quick",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cli.js",
+  "scripts": {
+    "test": "add 1 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UdithaIshan/git-quick.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": "cli.js",
+  "bugs": {
+    "url": "https://github.com/UdithaIshan/git-quick/issues"
+  },
+  "homepage": "https://github.com/UdithaIshan/git-quick#readme"
+}
