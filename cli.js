@@ -1,8 +1,12 @@
 #!/usr/bin/env node
-const {exec} = require("child_process");
+const {exec} = require('child_process');
 const add = require('./index');
 
-exec("git status", (error, stdout, stderr) => {
+console.log(process.argv)
+const cmd = process.argv.slice(2).join(' ');
+console.log(cmd)
+
+exec(cmd, (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -13,5 +17,3 @@ exec("git status", (error, stdout, stderr) => {
     }
     console.log(`stdout: ${stdout}`);
 });
-
-console.log(add(Number(process.argv[2]), Number(process.argv[3])));
