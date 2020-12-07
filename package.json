@@ -4,14 +4,14 @@
   "description": "",
   "main": "cli.js",
   "scripts": {
-    "test": "add 1 2"
+    "test": ""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UdithaIshan/git-quick.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["git","git-quick","quick","git-","cli","git cli","git quick"],
+  "author": "Uditha Ishan",
   "license": "ISC",
   "bin": "cli.js",
   "bugs": {
