@@ -43,12 +43,10 @@ switch (process.argv[2]) {
         cmdExec('git init');
         break;
     case "a":
-        cmdExec('git add');
+        cmdExec('git add .');
         break;
     case "c":
-        msg = process.argv.slice(3).join(' ')
-        console.log(msg);
-        // cmdExec('git init');
+        cmdExec(`git commit -m "${process.argv.slice(3).join(' ')}"`);
         break;
     case "p":
 
