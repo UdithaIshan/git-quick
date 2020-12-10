@@ -11,20 +11,24 @@ const cmdExec = (cmd) => {
     exec(cmd, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
-            return;
+            return error;
         }
         if (stderr) {
             console.log(`stderr: ${stderr}`);
-            return;
+            return stderr;
         }
         console.log(`stdout: ${stdout}`);
     });
 }
 
 const quickPush = (branch, msg) => {
-    cmdExec('git add .');
-    cmdExec(`git commit -m "${msg}"`);
-    cmdExec(`git push origin ${branch}`);
+    if(!cmdExec('git add .'))
+        if(!cmdExec(`git commit -m "${msg}"`))
+            cmdExec(`git push origin ${branch}`);
+
+    // cmdExec('git add .');
+    // cmdExec(`git commit -m "${msg}"`);
+    // cmdExec(`git push origin ${branch}`);
 }
 
 switch (process.argv[2]) {
@@ -32,7 +36,7 @@ switch (process.argv[2]) {
         cmdExec('git init');
         break;
     case "a":
-        cmdExec(`git add ${process.argv.slice(3).join(' ')}`);
+        cmdExec(`git add "${process.argv.slice(3).join(' ')}"`);
         break;
     case "c":
         cmdExec(`git commit -m "${process.argv.slice(3).join(' ')}"`);
