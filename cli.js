@@ -22,10 +22,13 @@ const cmdExec = (cmd) => {
 }
 
 const quickPush = (branch, msg) => {
-    if(!cmdExec('git add .'))
-        if(!cmdExec(`git commit -m "${msg}"`))
+    if(!cmdExec('git add .')){
+        console.log('in 1')
+        if(!cmdExec(`git commit -m "${msg}"`)){
+            console.log('in 2')
             cmdExec(`git push origin ${branch}`);
-
+        }
+    }
     // cmdExec('git add .');
     // cmdExec(`git commit -m "${msg}"`);
     // cmdExec(`git push origin ${branch}`);
