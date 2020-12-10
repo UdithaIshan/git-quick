@@ -17,7 +17,7 @@ const cmdExec = (cmd) => {
             console.log(`stderr: ${stderr}`);
             return;
         }
-        // console.log(`stdout: ${stdout}`);
+        console.log(`stdout: ${stdout}`);
     });
 }
 
@@ -43,3 +43,4 @@ switch (process.argv[2]) {
     default:
         break;
 }
+//z
