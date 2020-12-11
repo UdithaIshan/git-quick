@@ -1,1 +1,1 @@
-# git-quick
+# <tt>git-quick</tt>
