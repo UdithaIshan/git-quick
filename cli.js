@@ -26,7 +26,7 @@ const cmdsExec = (cmds) => {
                 return;
             }
             if (stderr) {
-                console.log(`stderr: ${stderr}`);
+                console.log(stderr);
                 return;
             }
             else {
@@ -37,19 +37,6 @@ const cmdsExec = (cmds) => {
     };
     execNext();
 };
-
-const quickPush = (branch, msg) => {
-    if(!cmdExec('git add .')){
-        console.log('in 1')
-        if(cmdExec(`git commit -m "${msg}"`)){
-            console.log('in 2')
-            cmdExec(`git push origin ${branch}`);
-        }
-    }
-    // cmdExec('git add .');
-    // cmdExec(`git commit -m "${msg}"`);
-    // cmdExec(`git push origin ${branch}`)
-}
 
 switch (process.argv[2]) {
     case "i":
