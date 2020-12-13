@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 const {exec} = require('child_process');
-const cmdArray = process.argv;
-console.log(cmdArray);
 
 const cmdExec = (cmd) => {
     exec(cmd, (error, stdout, stderr) => {

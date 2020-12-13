@@ -1,1 +1,1 @@
-# git-quick
+# git-easy

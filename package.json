@@ -1,21 +1,33 @@
 {
-  "name": "quick",
+  "name": "ez",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Single line git pusher",
   "main": "cli.js",
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UdithaIshan/git-quick.git"
+    "url": "git+https://github.com/UdithaIshan/git-easy.git"
   },
-  "keywords": ["git","git-quick","quick","git-","cli","git cli","git quick"],
+  "keywords": [
+    "git",
+    "git-easy",
+    "git-quick",
+    "quick",
+    "git-",
+    "cli",
+    "git cli",
+    "git quick",
+    "ez",
+    "easy",
+    "eazy"
+  ],
   "author": "Uditha Ishan",
   "license": "ISC",
   "bin": "cli.js",
   "bugs": {
-    "url": "https://github.com/UdithaIshan/git-quick/issues"
+    "url": "https://github.com/UdithaIshan/git-easy/issues"
   },
-  "homepage": "https://github.com/UdithaIshan/git-quick#readme"
+  "homepage": "https://github.com/UdithaIshan/git-easy#readme"
 }
