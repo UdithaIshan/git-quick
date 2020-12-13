@@ -13,7 +13,8 @@ const cmdExec = (cmd) => {
             console.log(`stderr: ${stderr}`);
             return;
         }
-        return stdout;
+        console.log(stdout);
+        return;
     });
 }
 
