@@ -1,1 +1,2 @@
-# git-easy
+# <tt>git-quick</tt>
+
