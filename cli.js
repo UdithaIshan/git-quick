@@ -24,7 +24,6 @@ const cmdsExec = (msg, branch) => {
         `git push origin ${branch}`
     ]
     let execNext = () => {
-        if(cmds.length) {
         exec(cmds.shift(), (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
@@ -35,10 +34,10 @@ const cmdsExec = (msg, branch) => {
                 return;
             }
             else {
+                console.log(stdout);
                 if (cmds.length) execNext();
             }
         });
-        }
     };
     execNext();
 };
