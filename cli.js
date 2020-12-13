@@ -25,7 +25,7 @@ const cmdsExec = (cmds) => {
             }
             if (stderr) {
                 console.log(stderr);
-                return;
+                // return;
             }
             else {
                 console.log(stdout);
