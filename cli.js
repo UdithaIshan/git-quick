@@ -13,16 +13,12 @@ const cmdExec = (cmd) => {
             console.log(`stderr: ${stderr}`);
             return;
         }
-        return stdout;
+        console.log(stdout);
+        return;
     });
 }
 
-const cmdsExec = (msg, branch) => {
-    const cmds = [
-        'git add .',
-        `git commit -m "${msg}"`,
-        `git push origin ${branch}`
-    ]
+const cmdsExec = (cmds) => {
     let execNext = () => {
         exec(cmds.shift(), (error, stdout, stderr) => {
             if (error) {
@@ -66,7 +62,13 @@ switch (process.argv[2]) {
         cmdExec(`git commit -m "${process.argv.slice(3).join(' ')}"`);
         break;
     case "p":
-        process.argv[4] != null?cmdsExec(process.argv.slice(3,4).join(' '), process.argv.slice(4).join(' ')):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
+        process.argv[4] != null?cmdsExec(
+            [
+            'git add .',
+            `git commit -m "${process.argv.slice(3,4).join(' ')}"`,
+            `git push origin ${process.argv.slice(4).join(' ')}`
+            ]
+        ):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
         break;
     default:
         break;
