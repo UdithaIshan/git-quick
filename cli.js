@@ -57,6 +57,18 @@ switch (process.argv[2]) {
             ]
         ):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
         break;
+    case "r":
+        cmdExec(`git remote add origin "${process.argv.slice(3).join(' ')}"`);
+        break;
+    case "cb":
+        cmdExec(`git checkout -b "${process.argv.slice(3).join(' ')}"`);
+        break;
+    case "b":
+        cmdExec(`git checkout "${process.argv.slice(3).join(' ')}"`);
+        break;
+    case "pl":
+        cmdExec(`git pull origin "${process.argv.slice(3).join(' ')}"`);
+        break;
     default:
         break;
 }
