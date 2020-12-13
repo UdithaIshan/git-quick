@@ -17,7 +17,7 @@ const cmdExec = (cmd) => {
     });
 }
 
-const series = (msg, branch) => {
+const cmdsExec = (msg, branch) => {
     const cmds = [
         'git add .',
         `git commit -m "${msg}"`,
@@ -34,20 +34,13 @@ const series = (msg, branch) => {
                 return;
             }
             else {
+                console.log(stdout);
                 if (cmds.length) execNext();
             }
         });
     };
     execNext();
 };
-
-// series([
-//     'git add .',
-//     'git commit -m "updates',
-//     'git push origin dev'
-// ], function(err){
-//    console.log('executed many commands in a row'); 
-// });
 
 const quickPush = (branch, msg) => {
     if(!cmdExec('git add .')){
@@ -59,7 +52,7 @@ const quickPush = (branch, msg) => {
     }
     // cmdExec('git add .');
     // cmdExec(`git commit -m "${msg}"`);
-    // cmdExec(`git push origin ${branch}`);
+    // cmdExec(`git push origin ${branch}`)
 }
 
 switch (process.argv[2]) {
@@ -67,13 +60,13 @@ switch (process.argv[2]) {
         cmdExec('git init');
         break;
     case "a":
-        series([`git add "${process.argv.slice(3).join(' ')}"`]);
+        cmdExec(`git add "${process.argv.slice(3).join(' ')}"`);
         break;
     case "c":
         cmdExec(`git commit -m "${process.argv.slice(3).join(' ')}"`);
         break;
     case "p":
-        process.argv[4] != null?series(process.argv.slice(3,4).join(' '), process.argv.slice(4).join(' ')):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
+        process.argv[4] != null?cmdsExec(process.argv.slice(3,4).join(' '), process.argv.slice(4).join(' ')):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
         break;
     default:
         break;
