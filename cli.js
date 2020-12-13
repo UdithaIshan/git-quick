@@ -2,10 +2,6 @@
 const {exec} = require('child_process');
 const cmdArray = process.argv;
 console.log(cmdArray);
-// const cmd = process.argv.slice(2).map( function(arg){
-//     return "'" + arg.replace(/'/g, "'\\''") + "'";
-//   }).join(' ');
-// console.log(cmd)
 
 const cmdExec = (cmd) => {
     exec(cmd, (error, stdout, stderr) => {
@@ -21,16 +17,13 @@ const cmdExec = (cmd) => {
     });
 }
 
-const series = (cmds) => {
+const series = (msg, branch) => {
+    const cmds = [
+        'git add .',
+        `git commit -m "${msg}"`,
+        `git push origin ${branch}`
+    ]
     let execNext = () => {
-        // exec(cmds.shift(), function(err){
-        //     if (err) {
-        //         cb(err);
-        //     } else {
-        //         if (cmds.length) execNext();
-        //         else cb(null);
-        //     }
-        // });
         exec(cmds.shift(), (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
@@ -40,9 +33,8 @@ const series = (cmds) => {
                 console.log(`stderr: ${stderr}`);
                 return;
             }
-            else{
+            else {
                 if (cmds.length) execNext();
-        //         else cb(null);
             }
         });
     };
@@ -81,14 +73,7 @@ switch (process.argv[2]) {
         cmdExec(`git commit -m "${process.argv.slice(3).join(' ')}"`);
         break;
     case "p":
-        series([
-            'git add .',
-            'git commit -m "updates',
-            'git push origin dev'
-        ], function(err){
-           console.log('executed many commands in a row'); 
-        });
-        // process.argv[4] != null?quickPush(process.argv.slice(3,4).join(' '), process.argv.slice(4).join(' ')):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
+        process.argv[4] != null?series(process.argv.slice(3,4).join(' '), process.argv.slice(4).join(' ')):cmdExec(`git push origin ${process.argv.slice(3).join(' ')}"`);
         break;
     default:
         break;
