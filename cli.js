@@ -49,6 +49,7 @@ switch (process.argv[2]) {
     case "p":
         process.argv[4] != null?cmdsExec(
             [
+            'git config --global core.safecrlf false',
             'git add .',
             `git commit -m "${process.argv.slice(3,4).join(' ')}"`,
             `git push origin ${process.argv.slice(4).join(' ')}`
