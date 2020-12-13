@@ -1,7 +1,7 @@
 {
-  "name": "quick",
+  "name": "giq",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Single line git pusher",
   "main": "cli.js",
   "scripts": {
     "test": ""
@@ -10,7 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/UdithaIshan/git-quick.git"
   },
-  "keywords": ["git","git-quick","quick","git-","cli","git cli","git quick"],
+  "keywords": [
+    "git",
+    "quick",
+    "git cli",
+    "git quick",
+    "giq"
+  ],
   "author": "Uditha Ishan",
   "license": "ISC",
   "bin": "cli.js",
