@@ -21,28 +21,14 @@ const cmdExec = (cmd) => {
     });
 }
 
-const series = (cmds) => {
-    let execNext = () => {
-        // exec(cmds.shift(), function(err){
-        //     if (err) {
-        //         cb(err);
-        //     } else {
-        //         if (cmds.length) execNext();
-        //         else cb(null);
-        //     }
-        // });
-        exec(cmds.shift(), (error, stdout, stderr) => {
-            if (error) {
-                console.log(`error: ${error.message}`);
-                return;
-            }
-            if (stderr) {
-                console.log(`stderr: ${stderr}`);
-                return;
-            }
-            else{
+const series = function(cmds, cb){
+    var execNext = function(){
+        exec(cmds.shift(), function(err){
+            if (err) {
+                cb(err);
+            } else {
                 if (cmds.length) execNext();
-        //         else cb(null);
+                else cb(null);
             }
         });
     };
@@ -75,7 +61,7 @@ switch (process.argv[2]) {
         cmdExec('git init');
         break;
     case "a":
-        series([`git add "${process.argv.slice(3).join(' ')}"`]);
+        cmdExec(`git add "${process.argv.slice(3).join(' ')}"`);
         break;
     case "c":
         cmdExec(`git commit -m "${process.argv.slice(3).join(' ')}"`);
@@ -93,3 +79,4 @@ switch (process.argv[2]) {
     default:
         break;
 }
+//z
