@@ -1,5 +1,5 @@
 {
-  "name": "ez",
+  "name": "giq",
   "version": "1.0.0",
   "description": "A Single line git pusher",
   "main": "cli.js",
@@ -8,26 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UdithaIshan/git-easy.git"
+    "url": "git+https://github.com/UdithaIshan/git-quick.git"
   },
   "keywords": [
     "git",
-    "git-easy",
-    "git-quick",
     "quick",
-    "git-",
-    "cli",
     "git cli",
     "git quick",
-    "ez",
-    "easy",
-    "eazy"
+    "giq"
   ],
   "author": "Uditha Ishan",
   "license": "ISC",
   "bin": "cli.js",
   "bugs": {
-    "url": "https://github.com/UdithaIshan/git-easy/issues"
+    "url": "https://github.com/UdithaIshan/git-quick/issues"
   },
-  "homepage": "https://github.com/UdithaIshan/git-easy#readme"
+  "homepage": "https://github.com/UdithaIshan/git-quick#readme"
 }
