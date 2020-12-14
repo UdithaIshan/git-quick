@@ -1,17 +1,15 @@
 # git-quick
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
-git-quick is single line git command executer. This also executes other basic git commands easily..
+git-quick cli is a single line git command executer. This also executes other basic git commands easily.
 
 # Installation
 > ```npm install -g giq```
 
 # Requirements
-> ``` git ``` must install first.
+*** [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
  
 # How to use single commands
-> currently only supports git push only.
+> currently supports git push only.
 
 ```sh
 giq p <commit_msg> <branch>
