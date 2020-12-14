@@ -40,6 +40,12 @@ switch (process.argv[2]) {
     case "i":
         cmdExec('git init');
         break;
+    case "s":
+        cmdExec('git status');
+        break;
+    case "l":
+        cmdExec('git log');
+        break;
     case "a":
         cmdExec(`git add "${process.argv.slice(3).join(' ')}"`);
         break;
