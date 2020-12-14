@@ -1,7 +1,7 @@
 {
   "name": "giq",
-  "version": "1.0.4",
-  "description": "A Single line git pusher",
+  "version": "1.0.5",
+  "description": "A single line git commands executer",
   "main": "cli.js",
   "scripts": {
     "test": ""
