@@ -29,10 +29,10 @@ git push origin <branch>
 | git remote add origin <repo link>  | giq r <repo link>|
 | git add <file / .> | giq a <file / .> |
 | git commit -m <message> | giq c <message> |
-| git push origin <branch>  | giq p <branch> |
+| git push origin <branch_name>  | giq p <branch_name> |
 | git checkout <branch_name> | giq b <branch_name> |
 | git checkout -b <branch_name> | giq cb <branch_name> |
-| git pull origin <branch> | giq pl <branch> |
+| git pull origin <branch_name> | giq pl <branch_name> |
 
 
 ### Development
