@@ -1,6 +1,6 @@
 {
   "name": "giq",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Single line git pusher",
   "main": "cli.js",
   "scripts": {
