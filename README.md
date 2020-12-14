@@ -10,7 +10,9 @@ git-quick is single line git command executer. This also executes other basic gi
 # Requirements
 > ``` git ``` must install first.
  
-# How to push using single command
+# How to use single commands
+> currently only supports git push only.
+
 ```sh
 giq p <commit_msg> <branch>
 ```
