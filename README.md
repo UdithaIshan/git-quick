@@ -1,5 +1,10 @@
 # git-quick
 
+<p align=center>
+ <a target="_blank" href="#"><img src="https://github.com/UdithaIshan/git-quick/workflows/NPM%20Publish/badge.svg?branch=main"></a>
+<!--![NPM Publish](https://github.com/UdithaIshan/git-quick/workflows/NPM%20Publish/badge.svg?branch=main)-->
+</p>
+
 git-quick cli is a single line git command executer. This also executes other basic git commands easily.
 
 # Installation
