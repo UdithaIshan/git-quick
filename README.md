@@ -7,15 +7,15 @@
 
 git-quick cli is a single line git command executer. This also executes other basic git commands easily.
 
-# Installation
+## Installation
 
 > `npm install -g giq`
 
-# Requirements
+## Pre-requisites
 
-**[Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)**
+[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-# How to use single commands
+## How to use single commands
 
 _currently supports git push only_
 
@@ -31,7 +31,7 @@ git commit -m "message"
 git push origin <branch>
 ```
 
-# Available other commands
+## Available other commands
 
 | git                               | giq                  |
 | --------------------------------- | -------------------- |
