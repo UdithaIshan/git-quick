@@ -43,6 +43,12 @@ switch (process.argv[2]) {
   case "s":
     cmdExec("git status");
     break;
+  case "st":
+    cmdExec("git stash");
+    break;
+  case "pop":
+    cmdExec("git pop");
+    break;
   case "l":
     cmdExec("git log");
     break;
@@ -70,6 +76,9 @@ switch (process.argv[2]) {
     break;
   case "b":
     cmdExec(`git checkout "${process.argv.slice(3).join(" ")}"`);
+    break;
+  case "bl":
+    cmdExec(`git blame "${process.argv.slice(3).join(" ")}"`);
     break;
   case "pl":
     cmdExec(`git pull origin "${process.argv.slice(3).join(" ")}"`);

@@ -43,8 +43,11 @@ git push origin <branch>
 | git checkout <branch_name>        | giq b <branch_name>  |
 | git checkout -b <branch_name>     | giq cb <branch_name> |
 | git pull origin <branch_name>     | giq pl <branch_name> |
+| git blame <file_name>             | giq bl <file_name>   |
 | git status                        | giq s                |
 | git log                           | giq l                |
+| git stash                         | giq st               |
+| git pop                           | giq pop              |
 
 **use `giq help` if you lost**
 
