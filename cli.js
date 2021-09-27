@@ -46,9 +46,6 @@ switch (process.argv[2]) {
   case "st":
     cmdExec("git stash");
     break;
-  case "pop":
-    cmdExec("git pop");
-    break;
   case "l":
     cmdExec("git log");
     break;

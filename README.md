@@ -47,7 +47,6 @@ git push origin <branch>
 | git status                        | giq s                |
 | git log                           | giq l                |
 | git stash                         | giq st               |
-| git pop                           | giq pop              |
 
 **use `giq help` if you lost**
 
