@@ -1,16 +1,21 @@
 # git-quick
 
+<p align=center>
+ <a target="_blank" href="#"><img src="https://github.com/UdithaIshan/git-quick/workflows/NPM%20Publish/badge.svg?branch=main"></a>
+<!--![NPM Publish](https://github.com/UdithaIshan/git-quick/workflows/NPM%20Publish/badge.svg?branch=main)-->
+</p>
+
 git-quick cli is a single line git command executer. This also executes other basic git commands easily.
 
-# Installation
+## Installation
 
 > `npm install -g giq`
 
-# Requirements
+## Pre-requisites
 
-**[Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)**
+[Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-# How to use single commands
+## How to use single commands
 
 _currently supports git push only_
 
@@ -26,7 +31,7 @@ git commit -m "message"
 git push origin <branch>
 ```
 
-# Available other commands
+## Available other commands
 
 | git                               | giq                  |
 | --------------------------------- | -------------------- |
@@ -38,8 +43,10 @@ git push origin <branch>
 | git checkout <branch_name>        | giq b <branch_name>  |
 | git checkout -b <branch_name>     | giq cb <branch_name> |
 | git pull origin <branch_name>     | giq pl <branch_name> |
+| git blame <file_name>             | giq bl <file_name>   |
 | git status                        | giq s                |
 | git log                           | giq l                |
+| git stash                         | giq st               |
 
 **use `giq help` if you lost**
 
